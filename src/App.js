@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-function App() {
+// clerk library
+import { ClerkProvider  , SignedIn, SignedOut, UserButton, useUser,RedirectToSignIn} from "@clerk/clerk-react";
+import Navbar from "./components/Navbar";
+
+export default function App() {
+  // clerk_key variable
+  const clerk_key = "pk_test_Y2VydGFpbi1mcm9nLTU0LmNsZXJrLmFjY291bnRzLmRldiQ";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Navbar/>  
+          <div className="App">      
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </div>  
+      </BrowserRouter>
   );
 }
-
-export default App;
