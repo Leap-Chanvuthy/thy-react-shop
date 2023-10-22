@@ -1,105 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}
-
-
-/* navbar */
-
-.navbar {
-  background-color: rgb(63, 68, 94);
-}
-
-.navbar nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  color : white;
-  text-decoration: none;
-}
-.navbar nav .logo {
-  display : flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-.navbar nav h4 {
-  color: white;
-  text-decoration : none;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 23px;
-}
-
-/* card */
-.products {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3 , 1fr);
-  
-}
-
-.card {
-  width: 300px;
-  margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.card-header {
-  background-color: #ccc;
-  padding: 10px;
-}
-.card-body {
-  padding: 10px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-.card-body img {
-  width: 40%;
-  object-fit: contain;
-}
-.card-footer {
-  background-color: #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-
-
-
-/* responsive */
-@media screen and (max-width: 576px) {
-  .navbar nav {
-    display: block;
-    justify-content: center;
-    display: none;
-  }
-  .links {
-    display: block;
-    justify-content: center;
-    gap: 23px;
-    padding: 1rem;
-  }
-
-  .products {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(1 , 1fr);
-    padding: 20px;
-  }
-  .card {
-    width: 200px;
-    margin: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
 }
