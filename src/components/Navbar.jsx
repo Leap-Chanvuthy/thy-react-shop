@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
       <div className="navbar fixed top-0 left-0 right-0 z-50 bg-info-content text-success">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl"></a>
+          <a className="btn btn-ghost normal-case text-xl">Thy Shop</a>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">

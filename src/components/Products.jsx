@@ -26,21 +26,21 @@ const Products = () => {
   const handleAddToCart = (id) => {
     const product = products.find((product) => product.id === id);
     addItem(product);
-    toast('Item added to cart');
+    toast.success('Item added to cart');
   };
 
   console.log(items);
 
   return (
-    <div className="products grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-5 py-20">
+    <div className="products grid justify-items-center lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-5">
       {loading && <div><h3>Loading....</h3></div>}
       {products && products.map(product => (
         <div className="card w-80 bg-base-100 shadow-xl border-2 border-green-50">
-          <figure>
+          <figure className="bg-white">
             <img 
               src={product.image}
               alt={product.image}
-              className="w-40"
+              className="w-40 h-56"
             />
           </figure>
           <div className="card-body">
@@ -55,7 +55,10 @@ const Products = () => {
           </div>
         </div>
       ))}
-      <ToastContainer className="absolute inset-y-0 mx-auto" />
+      <ToastContainer
+       theme="dark"
+       autoClose={1000}
+       className="absolute inset-y-0 mx-auto" />
     </div>
   );
 };
