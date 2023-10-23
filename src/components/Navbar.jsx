@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
       <div className="navbar fixed top-0 left-0 right-0 z-50 bg-info-content text-success">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">Thy Shop</a>
+          <Link to="/"><a className="btn btn-ghost normal-case text-xl">Thy Shop</a></Link>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQcS0aRE6aVWLk9LH72X3Bw0QwGDMg_l6qaCK-uEb-J23oresQv6zrRqvLKInAOWGTMc&usqp=CAU" />
               </div>
             </label>
             <ul

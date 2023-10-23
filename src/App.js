@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductDetail from "./components/ProductDetail";
 
 // clerk library
 import { ClerkProvider  , SignedIn, SignedOut, UserButton, useUser,RedirectToSignIn} from "@clerk/clerk-react";
 import Navbar from "./components/Navbar";
+
 
 export default function App() {
   // clerk_key variable
@@ -21,6 +23,7 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/item/:id" element={<ProductDetail/>}/>
             </Routes>
           </div>  
       </BrowserRouter>
